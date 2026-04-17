@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gundla Shashi Kumar Goud | Data Analyst & Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+</head>
+<body>
+
+  <!-- ===================== CURSOR ===================== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo">
+      <span class="bracket">&lt;</span>shashi<span class="bracket">/&gt;</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">about</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#education">education</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+        <i class="ph ph-sun" id="themeIcon"></i>
+      </button>
+      <a href="#contact" class="btn-hire">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <button class="drawer-close" id="drawerClose"><i class="ph ph-x"></i></button>
+    <ul>
+      <li><a href="#about"       onclick="closeDrawer()">About</a></li>
+      <li><a href="#skills"      onclick="closeDrawer()">Skills</a></li>
+      <li><a href="#experience"  onclick="closeDrawer()">Experience</a></li>
+      <li><a href="#projects"    onclick="closeDrawer()">Projects</a></li>
+      <li><a href="#education"   onclick="closeDrawer()">Education</a></li>
+      <li><a href="#contact"     onclick="closeDrawer()">Contact</a></li>
+    </ul>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="pulse-dot"></span>
+        Available for opportunities
+      </div>
+
+      <h1 class="hero-name">
+  <span class="glitch" data-text="GUNDLA SHASHI">GUNDLA SHASHI</span>
+  <span class="glitch" data-text="KUMAR GOUD">KUMAR GOUD</span>
+</h1>
+
+      <div class="hero-sub">
+        <span class="sub-prefix">I'm a&nbsp;</span>
+        <span class="sub-type" id="typewriter"></span><span class="blink-cursor">|</span>
+      </div>
+
+      <p class="hero-desc">
+        Aspiring Data Analyst &amp; Frontend Developer crafting data-driven solutions
+        and responsive web experiences. B.Tech CSE @ Parul University.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">
+          <i class="ph ph-rocket-launch"></i> View Work
+        </a>
+        <a href="mailto:gundlashashigoud143@gmail.com" class="btn-outline">
+          <i class="ph ph-paper-plane-tilt"></i> Get In Touch
+        </a>
+        <a href="Shashi_Kumar_Goud_Resume.pdf" target="_blank" class="btn-outline">
+         View Resume
+        </a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://github.com/shashi-1410" target="_blank" rel="noopener" title="GitHub">
+          <i class="ph ph-github-logo"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/gundla-shashi/" target="_blank" rel="noopener" title="LinkedIn">
+          <i class="ph ph-linkedin-logo"></i>
+        </a>
+        <a href="https://x.com/BITTUGOUD17" target="_blank" rel="noopener" title="Twitter / X">
+          <i class="ph ph-x-logo"></i>
+        </a>
+        <a href="mailto:gundlashashigoud143@gmail.com" title="Email">
+          <i class="ph ph-envelope-simple"></i>
+        </a>
+      </div>
+    </div><!-- /hero-content -->
+
+    <div class="hero-visual">
+      <div class="photo-frame">
+        <img src="shashi_photo.jpg" alt="Shashi Kumar Goud" class="hero-photo" />
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+      </div>
+      <div class="float-badge fb-1"><i class="ph ph-database"></i> Data Analysis</div>
+      <div class="float-badge fb-2"><i class="ph ph-code"></i> Python &amp; SQL</div>
+      <div class="float-badge fb-3"><i class="ph ph-chart-bar"></i> Power BI</div>
+      <div class="float-badge fb-4"><i class="ph ph-paint-brush"></i> Frontend Dev</div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="sh-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section about-sec" id="about">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-num">01.</span>
+        <h2 class="sec-title">About Me</h2>
+        <div class="sec-rule"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy reveal-left">
+          <p>Hey! I'm <strong>Shashi Kumar Goud</strong>, a passionate Computer Science Engineering student
+          at Parul University (2022–2026), based in Hyderabad, Telangana.</p>
+          <p>
+I specialize in the intersection of <strong>data analysis</strong> and <strong>frontend development</strong>,
+transforming raw datasets into actionable insights and building responsive, user-friendly web applications.
+I enjoy solving real-world problems by combining analytical thinking with modern web technologies.
+</p>
+
+<p>
+I have hands-on experience in <strong>Python, SQL, and frontend development</strong>, along with a 3-month internship as a
+<strong>Frontend Developer at Config Software Solutions</strong>, where I built responsive web interfaces
+and improved UI performance. I focus on writing clean, efficient code and delivering practical, data-driven solutions.
+</p>
+          <div class="stats-row">
+            <div class="stat-box"><span class="s-num">3+</span><span class="s-label">Projects</span></div>
+            <div class="stat-box"><span class="s-num">3</span><span class="s-label">Certifications</span></div>
+            <div class="stat-box"><span class="s-num">7.49</span><span class="s-label">CGPA</span></div>
+            <div class="stat-box"><span class="s-num">10</span><span class="s-label">SSC CGPA</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section class="section skills-sec" id="skills">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-num">02.</span>
+        <h2 class="sec-title">Skills &amp; Tools</h2>
+        <div class="sec-rule"></div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-cat reveal-up">
+          <div class="cat-head"><i class="ph ph-code"></i><h3>Programming</h3></div>
+          <div class="tags">
+            <span class="tag"><i class="ph ph-snake-logo"></i> Python</span>
+            <span class="tag"><i class="ph ph-database"></i> SQL</span>
+            <span class="tag"><i class="ph ph-file-html"></i> HTML5</span>
+            <span class="tag"><i class="ph ph-paint-brush"></i> CSS3</span>
+            <span class="tag"><i class="ph ph-lightning"></i> JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-cat reveal-up" style="--d:0.1s">
+          <div class="cat-head"><i class="ph ph-chart-line"></i><h3>Data Analysis</h3></div>
+          <div class="tags">
+            <span class="tag"><i class="ph ph-microsoft-excel-logo"></i> MS Excel</span>
+            <span class="tag"><i class="ph ph-table"></i> Pandas</span>
+            <span class="tag"><i class="ph ph-calculator"></i> NumPy</span>
+            <span class="tag"><i class="ph ph-chart-bar"></i> Power BI</span>
+            <span class="tag"><i class="ph ph-chart-pie"></i> Tableau</span>
+          </div>
+        </div>
+
+        <div class="skill-cat reveal-up" style="--d:0.2s">
+          <div class="cat-head"><i class="ph ph-wrench"></i><h3>Frameworks &amp; Tools</h3></div>
+          <div class="tags">
+            <span class="tag"><i class="ph ph-git-branch"></i> Git</span>
+            <span class="tag"><i class="ph ph-github-logo"></i> GitHub</span>
+            <span class="tag"><i class="ph ph-code-block"></i> VS Code</span>
+            <span class="tag"><i class="ph ph-flask"></i> Flask</span>
+            <span class="tag"><i class="ph ph-rocket-launch"></i> FastAPI</span>
+          </div>
+        </div>
+
+        <div class="skill-cat reveal-up" style="--d:0.3s">
+          <div class="cat-head"><i class="ph ph-brain"></i><h3>Core Concepts</h3></div>
+          <div class="tags">
+            <span class="tag"><i class="ph ph-broom"></i> Data Cleaning</span>
+            <span class="tag"><i class="ph ph-magnifying-glass"></i> Data Analysis</span>
+            <span class="tag"><i class="ph ph-math-operations"></i> Statistics</span>
+            <span class="tag"><i class="ph ph-puzzle-piece"></i> Problem Solving</span>
+            <span class="tag"><i class="ph ph-cylinder"></i> DB Management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section class="section exp-sec" id="experience">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-num">03.</span>
+        <h2 class="sec-title">Experience</h2>
+        <div class="sec-rule"></div>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-line"></div>
+        <div class="tl-item reveal-up">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <div>
+                <h3>Frontend Developer Intern</h3>
+                <span class="tl-company"><i class="ph ph-buildings"></i> Config Software Solutions</span>
+              </div>
+              <span class="tl-duration">3 Months</span>
+            </div>
+            <p class="tl-desc">
+              Worked as a Frontend Developer intern, building responsive web interfaces and
+              collaborating on the company website. Gained hands-on professional experience
+              with HTML5, CSS3, and JavaScript in a real-world development environment.
+            </p>
+            <div class="tl-chips">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive Design</span>
+            </div>
+            <a href="https://github.com/shashi-1410/CONFIG_WEBSITE.git"
+               target="_blank" rel="noopener" class="tl-link">
+              <i class="ph ph-github-logo"></i> View Project on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section class="section proj-sec" id="projects">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-num">04.</span>
+        <h2 class="sec-title">Projects</h2>
+        <div class="sec-rule"></div>
+      </div>
+
+      <div class="proj-grid">
+
+        <!-- Card 1 -->
+        <div class="proj-card featured reveal-up">
+          <div class="pc-top">
+            <span class="pc-badge">🎓 Final Year Project</span>
+            <a href="https://github.com/shashi-1410/crop-recommendation-system.git"
+               target="_blank" rel="noopener" class="pc-gh" title="GitHub">
+              <i class="ph ph-github-logo"></i>
+            </a>
+          </div>
+          <div class="pc-icon"><i class="ph ph-plant"></i></div>
+          <h3>Crop Recommendation System</h3>
+          <p>ML-based system that analyzes agricultural data to recommend suitable crops based on
+          soil composition and environmental factors, powered by a FastAPI backend.</p>
+          <ul class="pc-list">
+            <li>Analyzed agricultural data for soil &amp; environmental factors</li>
+            <li>Performed data cleaning, preprocessing &amp; analysis with Pandas/NumPy</li>
+            <li>Built predictive ML logic for data-driven crop recommendations</li>
+          </ul>
+          <div class="pc-stack">
+            <span>Python</span><span>Pandas</span><span>NumPy</span>
+            <span>FastAPI</span><span>ML</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="proj-card reveal-up" style="--d:0.1s">
+          <div class="pc-top">
+            <span class="pc-badge intern">💼 Internship Project</span>
+            <a href="https://github.com/shashi-1410/CONFIG_WEBSITE.git"
+               target="_blank" rel="noopener" class="pc-gh" title="GitHub">
+              <i class="ph ph-github-logo"></i>
+            </a>
+          </div>
+          <div class="pc-icon"><i class="ph ph-globe"></i></div>
+          <h3>Config Company Website</h3>
+          <p>Responsive corporate website built during internship at Config Software Solutions.
+          Fully responsive across all devices with a modern, clean design.</p>
+          <ul class="pc-list">
+            <li>Designed &amp; built fully responsive web interface</li>
+            <li>Implemented modern UI/UX design principles</li>
+            <li>Deployed for professional company use</li>
+          </ul>
+          <div class="pc-stack">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="proj-card reveal-up" style="--d:0.2s">
+          <div class="pc-top">
+            <span class="pc-badge">🛠 Backend Project</span>
+            <a href="https://github.com/shashi-1410" target="_blank" rel="noopener" class="pc-gh" title="GitHub">
+              <i class="ph ph-github-logo"></i>
+            </a>
+          </div>
+          <div class="pc-icon"><i class="ph ph-ticket"></i></div>
+          <h3>Support &amp; Ticket Management</h3>
+          <p>Full-featured website support ticket system for tracking issues and resolution patterns,
+          with dashboards for monitoring performance and SQL-based data storage.</p>
+          <ul class="pc-list">
+            <li>Managed &amp; analyzed ticket data to identify resolution patterns</li>
+            <li>Designed structured SQL data storage &amp; retrieval system</li>
+            <li>Built performance monitoring dashboards</li>
+          </ul>
+          <div class="pc-stack">
+            <span>Python</span><span>Flask</span><span>SQL</span><span>Dashboard</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EDUCATION ===================== -->
+  <section class="section edu-sec" id="education">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-num">05.</span>
+        <h2 class="sec-title">Education</h2>
+        <div class="sec-rule"></div>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-card reveal-up">
+          <div class="edu-ico"><i class="ph ph-graduation-cap"></i></div>
+          <div class="edu-info">
+            <h3>B.Tech — Computer Science Engineering</h3>
+            <span class="edu-school">Parul University, Vadodara</span>
+            <span class="edu-year">2022 – 2026</span>
+            <span class="edu-grade">CGPA: 7.49 / 10</span>
+          </div>
+        </div>
+        <div class="edu-card reveal-up" style="--d:0.1s">
+          <div class="edu-ico"><i class="ph ph-books"></i></div>
+          <div class="edu-info">
+            <h3>Intermediate (MPC)</h3>
+            <span class="edu-school">Narayana Junior College, Hyderabad</span>
+            <span class="edu-year">2020 – 2022</span>
+            <span class="edu-grade">88%</span>
+          </div>
+        </div>
+        <div class="edu-card reveal-up" style="--d:0.2s">
+          <div class="edu-ico"><i class="ph ph-medal"></i></div>
+          <div class="edu-info">
+            <h3>SSC (10th Standard)</h3>
+            <span class="edu-school">Shanthi Nikethan High School, Hyderabad</span>
+            <span class="edu-year">2020</span>
+            <span class="edu-grade perfect">CGPA: 10 / 10 ⭐</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CERTIFICATIONS ===================== -->
+  <section class="section cert-sec" id="certifications">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-num">06.</span>
+        <h2 class="sec-title">Certifications</h2>
+        <div class="sec-rule"></div>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card reveal-up">
+          <div class="cert-ico"><i class="ph ph-database"></i></div>
+          <div class="cert-info">
+            <h3>SQL and Relational Databases 101</h3>
+            <span><i class="ph ph-seal-check"></i> IBM — Cognitive Class</span>
+          </div>
+        </div>
+        <div class="cert-card reveal-up" style="--d:0.1s">
+          <div class="cert-ico"><i class="ph ph-snake-logo"></i></div>
+          <div class="cert-info">
+            <h3>Python Programming</h3>
+            <span><i class="ph ph-seal-check"></i> Skill India Digital Hub (NSDC)</span>
+          </div>
+        </div>
+        <div class="cert-card reveal-up" style="--d:0.2s">
+          <div class="cert-ico"><i class="ph ph-chart-line-up"></i></div>
+          <div class="cert-info">
+            <h3>Data Analytics Job Simulation</h3>
+            <span><i class="ph ph-seal-check"></i> Deloitte via Forage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section contact-sec" id="contact">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-num">07.</span>
+        <h2 class="sec-title">Get In Touch</h2>
+        <div class="sec-rule"></div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-left reveal-left">
+          <h3>Let's Work Together</h3>
+          <p>I'm actively seeking internships and entry-level opportunities in Data Analytics and
+          Frontend Development. If you have a project, job, or just want to chat tech — my inbox
+          is always open!</p>
+
+          <div class="c-details">
+            <a href="mailto:gundlashashigoud143@gmail.com" class="c-item">
+              <i class="ph ph-envelope-simple"></i>
+              <span>gundlashashigoud143@gmail.com</span>
+            </a>
+            <a href="tel:+919948455953" class="c-item">
+              <i class="ph ph-phone"></i>
+              <span>+91 99484 55953</span>
+            </a>
+            <div class="c-item">
+              <i class="ph ph-map-pin"></i>
+              <span>Hyderabad, Telangana, India</span>
+            </div>
+          </div>
+
+          <div class="c-socials">
+            <a href="https://github.com/shashi-1410" target="_blank" rel="noopener" class="c-social">
+              <i class="ph ph-github-logo"></i> shashi-1410
+            </a>
+            <a href="https://www.linkedin.com/in/gundla-shashi/" target="_blank" rel="noopener" class="c-social">
+              <i class="ph ph-linkedin-logo"></i> gundla-shashi
+            </a>
+            <a href="https://x.com/BITTUGOUD17" target="_blank" rel="noopener" class="c-social">
+              <i class="ph ph-x-logo"></i> @BITTUGOUD17
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-right reveal-right">
+          <div class="cta-card">
+            <div class="cta-glow"></div>
+            <i class="ph ph-paper-plane-right cta-ico"></i>
+            <h3>Say Hello!</h3>
+            <p>Whether it's a job opportunity, project collaboration, or just a friendly chat —
+            I'd love to hear from you.</p>
+            <a href="mailto:gundlashashigoud143@gmail.com" class="btn-primary large">
+              <i class="ph ph-envelope-open"></i> Send an Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="foot-inner">
+        <div class="foot-logo">
+          <span class="bracket">&lt;</span>shashi<span class="bracket">/&gt;</span>
+        </div>
+        <p class="foot-copy">Designed &amp; Built by <strong>Gundla Shashi Kumar Goud</strong> &copy; 2025</p>
+        <div class="foot-socials">
+          <a href="https://github.com/shashi-1410" target="_blank" rel="noopener"><i class="ph ph-github-logo"></i></a>
+          <a href="https://www.linkedin.com/in/gundla-shashi/" target="_blank" rel="noopener"><i class="ph ph-linkedin-logo"></i></a>
+          <a href="https://x.com/BITTUGOUD17" target="_blank" rel="noopener"><i class="ph ph-x-logo"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
